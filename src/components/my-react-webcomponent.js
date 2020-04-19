@@ -1,3 +1,4 @@
+/* @jsx React.createElement */
 import { BaseElement } from 'atomico'
 import React from 'react'
 import ReactDom from 'react-dom'
@@ -23,21 +24,17 @@ function createCustomElement (Component) {
 }
 
 // React component
-function MyReactComponent ({ myProp }) {
+function MyReactComponent ({ count }) {
   return (
-    <>
-      <style>
-        {`
-        :host{width:100%; height: 100%;display:inline-block;border:1px solid black;padding:1rem;box-sizing:border-box}
-      `}
-      </style>
-      count : [{myProp}]<h1>WebComponent -> React </h1>
-    </>
+    <div>
+      <style>{style()}</style>
+      count : [{count}]<h1>WebComponent -> React </h1>
+    </div>
   )
 }
 
 MyReactComponent.props = {
-  myProp: {
+  count: {
     type: Number,
     value: 10
   }
@@ -49,3 +46,14 @@ export default window.customElements.define(
   'my-react-webcomponent',
   createCustomElement(MyReactComponent)
 )
+
+const style = () => `
+:host {
+  width: 100%; 
+  height: 100%;
+  display: block;
+  border: 1px solid black;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+`

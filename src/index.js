@@ -1,1 +1,1 @@
-import './components/my-react-webcomponent'
+import './components/a-web-component'

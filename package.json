@@ -5,7 +5,7 @@
   "source": "index.html",
   "scripts": {
     "build": "bundle index.html dist",
-    "dev": "bundle index.html dist --watch --server --jsx react",
+    "dev": "bundle index.html dist --watch --server",
     "prepare": "npm run build"
   },
   "dependencies": {
