@@ -28,7 +28,7 @@ function MyReactComponent ({ count }) {
   return (
     <div>
       <style>{style()}</style>
-      count : [{count}]<h1>WebComponent -> React </h1>
+      count : [{count}]<h1>React -> WebComponent</h1>
     </div>
   )
 }
