@@ -29,5 +29,6 @@ button {
 }
 my-react-webcomponent {
   margin-left: 6px;
+  width: 500px;
 }
 `
